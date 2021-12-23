@@ -1,0 +1,490 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6FA4F32-30B3-44A1-BAA0-57B7F745205A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopCar</RootNamespace>
+    <AssemblyName>ShopCar</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44384</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.aspx" />
+    <Content Include="App_Data\Maxacnhan.mdf" />
+    <Content Include="App_Data\Maxacnhan_log.ldf">
+      <DependentUpon>Maxacnhan.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\SQLQuery3.sql" />
+    <Content Include="cms\admin\AdminLoadControl.ascx" />
+    <Content Include="cms\admin\css\add.jpg" />
+    <Content Include="cms\admin\css\Admin.css" />
+    <Content Include="cms\admin\css\check.jpg" />
+    <Content Include="cms\admin\css\cssChiTietDonHang.css" />
+    <Content Include="cms\admin\css\cssDangNhap.css" />
+    <Content Include="cms\admin\css\delete.jpg" />
+    <Content Include="cms\admin\css\edit.jpg" />
+    <Content Include="cms\admin\css\expend.jpg" />
+    <Content Include="cms\admin\css\unCheck.jpg" />
+    <Content Include="cms\admin\css\view.png" />
+    <Content Include="cms\admin\js\jquery-3.6.0.min.js" />
+    <Content Include="cms\admin\KhachHang\KhachHangLoadControl.ascx" />
+    <Content Include="cms\admin\KhachHang\KhachHang_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\BaoCaoThongKe\BaoCao.aspx" />
+    <Content Include="cms\admin\SanPham\BaoCaoThongKe\BaoCaoLoadConTrol.ascx" />
+    <Content Include="cms\admin\SanPham\BaoCaoThongKe\BaoCao_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\Ajax\DonHang.aspx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\ChiTietDonHang.aspx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\DonHang_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyDonHang\DonHang_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyMau\Ajax\Mau.aspx" />
+    <Content Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyMau\Mau_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyMau\Mau_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx" />
+    <Content Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx" />
+    <Content Include="cms\admin\SanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\admin\TaiKhoan\Ajax\TaiKhoan.aspx" />
+    <Content Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx" />
+    <Content Include="cms\admin\TaiKhoan\TaiKhoan_HienThi.ascx" />
+    <Content Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx" />
+    <Content Include="cms\display\DisplayLoadControl.ascx" />
+    <Content Include="cms\display\SanPham\Ajax\XuLyGioHang.aspx" />
+    <Content Include="cms\display\SanPham\ChiTietSanPham.ascx" />
+    <Content Include="cms\display\SanPham\DanhSachCacSanPham.ascx" />
+    <Content Include="cms\display\SanPham\GioHang.ascx" />
+    <Content Include="cms\display\SanPham\SanPhamLoadControl.ascx" />
+    <Content Include="cms\display\SanPham\TimKiem.ascx" />
+    <Content Include="cms\display\SanPham\TrangChuModulSanPham.ascx" />
+    <Content Include="cms\display\ThanhVien\DangKy.ascx" />
+    <Content Include="cms\display\ThanhVien\DangNhap.ascx" />
+    <Content Include="cms\display\ThanhVien\DoiMatKhau.ascx" />
+    <Content Include="cms\display\ThanhVien\QuenMatKhau.ascx" />
+    <Content Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx" />
+    <Content Include="cms\display\ThanhVien\XacNhanEmail.ascx" />
+    <Content Include="cms\display\TrangChu\TrangChuLoadControl.ascx" />
+    <Content Include="DanhGia.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Gioithieu.aspx" />
+    <Content Include="hinhanh\additem.png" />
+    <Content Include="hinhanh\bag.jpg" />
+    <Content Include="hinhanh\cart.png" />
+    <Content Include="hinhanh\cart1.png" />
+    <Content Include="hinhanh\check.png" />
+    <Content Include="hinhanh\coollogo_com-675484.png" />
+    <Content Include="hinhanh\fa fa-facebook.png" />
+    <Content Include="hinhanh\Gmail.png" />
+    <Content Include="hinhanh\gmail1.png" />
+    <Content Include="hinhanh\instagram.png" />
+    <Content Include="hinhanh\instagram1.png" />
+    <Content Include="hinhanh\Location.png" />
+    <Content Include="hinhanh\login.png" />
+    <Content Include="hinhanh\logo.jpg" />
+    <Content Include="hinhanh\logo.png" />
+    <Content Include="hinhanh\Phone.png" />
+    <Content Include="hinhanh\policy1.png" />
+    <Content Include="hinhanh\policy2.png" />
+    <Content Include="hinhanh\policy3.png" />
+    <Content Include="hinhanh\policy4.png" />
+    <Content Include="hinhanh\s12.jpg" />
+    <Content Include="hinhanh\Security-Password-2-icon.png" />
+    <Content Include="hinhanh\slider_1.png" />
+    <Content Include="hinhanh\slider_2.png" />
+    <Content Include="hinhanh\slider_3.png" />
+    <Content Include="hinhanh\sua.png" />
+    <Content Include="hinhanh\twitter.png" />
+    <Content Include="hinhanh\User-icon.png" />
+    <Content Include="hinhanh\VD SNEAKER.jpg" />
+    <Content Include="hinhanh\xoa.png" />
+    <Content Include="hinhanh\youtube.png" />
+    <Content Include="images\feature\audi.jpg" />
+    <Content Include="images\feature\backtotop.png" />
+    <Content Include="images\feature\home-bg-1.jpg" />
+    <Content Include="images\feature\home-bg-2.jpg" />
+    <Content Include="images\feature\home-bg-3.jpg" />
+    <Content Include="images\feature\home-text-1.png" />
+    <Content Include="images\feature\home-text-2.png" />
+    <Content Include="images\feature\home-text-3.png" />
+    <Content Include="images\feature\honda.png" />
+    <Content Include="images\feature\hyundai.jpg" />
+    <Content Include="images\feature\lenluon.png" />
+    <Content Include="images\feature\mec.jpg" />
+    <Content Include="images\feature\search.png" />
+    <Content Include="images\feature\user.png" />
+    <Content Include="images\feature\vin.jpg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\s12.jpg" />
+    <Content Include="images\s3.jpg" />
+    <Content Include="images\s3.png" />
+    <Content Include="LienHe.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="pic\SanPham\d1.jpg" />
+    <Content Include="pic\SanPham\d2.jpg" />
+    <Content Include="pic\SanPham\gh1.jpg" />
+    <Content Include="pic\SanPham\gh2.jpg" />
+    <Content Include="pic\SanPham\gu1.jpg" />
+    <Content Include="pic\SanPham\gu2.jpg" />
+    <Content Include="pic\SanPham\v1.jpg" />
+    <Content Include="pic\SanPham\v2.jpg" />
+    <Content Include="pic\SanPham\x1.jpg" />
+    <Content Include="pic\SanPham\x2.jpg" />
+    <Content Include="SanPham.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\Database\ChiTietDonDatHang.cs" />
+    <Content Include="App_Code\Database\ChiTietDonHang.cs" />
+    <Content Include="App_Code\Database\DangKy.cs" />
+    <Content Include="App_Code\Database\DanhMuc.cs" />
+    <Content Include="App_Code\Database\DonDatHang.cs" />
+    <Content Include="App_Code\Database\Global.cs" />
+    <Content Include="App_Code\Database\HoaDon.cs" />
+    <Content Include="App_Code\Database\KhachHang.cs" />
+    <Content Include="App_Code\Database\Mau.cs" />
+    <Content Include="App_Code\Database\NhanVien.cs" />
+    <Content Include="App_Code\Database\NhomSanPham.cs" />
+    <Content Include="App_Code\Database\QuyenDangNhap.cs" />
+    <Content Include="App_Code\Database\SanPham.cs" />
+    <Content Include="App_Code\Database\Size.cs" />
+    <Content Include="App_Code\Database\SQLDatabase.cs" />
+    <Content Include="App_Code\EmailExtension.cs" />
+    <Content Include="App_Code\ketnoi.cs" />
+    <Content Include="App_Code\ketnoi_maxacnhan.cs" />
+    <Content Include="App_Code\MaHoa.cs" />
+    <Content Include="App_Code\Onepay\OnepayCode.cs" />
+    <Compile Include="cms\admin\AdminLoadControl.ascx.cs">
+      <DependentUpon>AdminLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\KhachHang\KhachHangLoadControl.ascx.cs">
+      <DependentUpon>KhachHangLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\KhachHang\KhachHang_HienThi.ascx.cs">
+      <DependentUpon>KhachHang_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\BaoCaoThongKe\BaoCao.aspx.cs">
+      <DependentUpon>BaoCao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\BaoCaoThongKe\BaoCaoLoadConTrol.ascx.cs">
+      <DependentUpon>BaoCaoLoadConTrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\BaoCaoThongKe\BaoCao_HienThi.ascx.cs">
+      <DependentUpon>BaoCao_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\Ajax\DanhMuc.aspx.cs">
+      <DependentUpon>DanhMuc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMucLoadControl.ascx.cs">
+      <DependentUpon>DanhMucLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_HienThi.ascx.cs">
+      <DependentUpon>DanhMuc_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDanhMuc\DanhMuc_ThemMoi.ascx.cs">
+      <DependentUpon>DanhMuc_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\Ajax\DonHang.aspx.cs">
+      <DependentUpon>DonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\ChiTietDonHang.aspx.cs">
+      <DependentUpon>ChiTietDonHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHangLoadControl.ascx.cs">
+      <DependentUpon>DonHangLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHang_HienThi.ascx.cs">
+      <DependentUpon>DonHang_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyDonHang\DonHang_ThemMoi.ascx.cs">
+      <DependentUpon>DonHang_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\Ajax\Mau.aspx.cs">
+      <DependentUpon>Mau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\MauLoadControl.ascx.cs">
+      <DependentUpon>MauLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\Mau_HienThi.ascx.cs">
+      <DependentUpon>Mau_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyMau\Mau_ThemMoi.ascx.cs">
+      <DependentUpon>Mau_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\Ajax\NhomSanPham.aspx.cs">
+      <DependentUpon>NhomSanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomLoadControl.ascx.cs">
+      <DependentUpon>NhomLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_HienThi.ascx.cs">
+      <DependentUpon>NhomSanPham_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLyNhomSanPham\NhomSanPham_ThemMoi.ascx.cs">
+      <DependentUpon>NhomSanPham_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\Ajax\SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPham_HienThi.ascx.cs">
+      <DependentUpon>SanPham_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\QuanLySanPham\SanPham_ThemMoi.ascx.cs">
+      <DependentUpon>SanPham_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\SanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\Ajax\TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoanLoadControl.ascx.cs">
+      <DependentUpon>TaiKhoanLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoan_HienThi.ascx.cs">
+      <DependentUpon>TaiKhoan_HienThi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\admin\TaiKhoan\TaiKhoan_ThemMoi.ascx.cs">
+      <DependentUpon>TaiKhoan_ThemMoi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\DisplayLoadControl.ascx.cs">
+      <DependentUpon>DisplayLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\Ajax\XuLyGioHang.aspx.cs">
+      <DependentUpon>XuLyGioHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\ChiTietSanPham.ascx.cs">
+      <DependentUpon>ChiTietSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\DanhSachCacSanPham.ascx.cs">
+      <DependentUpon>DanhSachCacSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\GioHang.ascx.cs">
+      <DependentUpon>GioHang.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\SanPhamLoadControl.ascx.cs">
+      <DependentUpon>SanPhamLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\TimKiem.ascx.cs">
+      <DependentUpon>TimKiem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\SanPham\TrangChuModulSanPham.ascx.cs">
+      <DependentUpon>TrangChuModulSanPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangKy.ascx.cs">
+      <DependentUpon>DangKy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DangNhap.ascx.cs">
+      <DependentUpon>DangNhap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\DoiMatKhau.ascx.cs">
+      <DependentUpon>DoiMatKhau.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\QuenMatKhau.ascx.cs">
+      <DependentUpon>QuenMatKhau.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\ThanhVienLoadControl.ascx.cs">
+      <DependentUpon>ThanhVienLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\ThanhVien\XacNhanEmail.ascx.cs">
+      <DependentUpon>XacNhanEmail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms\display\TrangChu\TrangChuLoadControl.ascx.cs">
+      <DependentUpon>TrangChuLoadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhGia.aspx.cs">
+      <DependentUpon>DanhGia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gioithieu.aspx.cs">
+      <DependentUpon>Gioithieu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LienHe.aspx.cs">
+      <DependentUpon>LienHe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\images\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56872</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44384/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
